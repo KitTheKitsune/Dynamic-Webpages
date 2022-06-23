@@ -1,0 +1,75 @@
+<html>
+    <!-- Quotes, celebrity mis-quotations -->
+    <!-- by Kendrick Smith -->
+    <!-- V 0.1 19 Sept. 2019 -->
+    
+    
+    
+    <head>
+        <title>Slideshow</title>
+        <p id="number" style="opacity: 0; height: 0px">0</p>
+    </head>
+    
+    <body>
+        <h1 id="title" style="text-align: center">COMMONLY QUOTED MIS-QUOTES!</h1>
+        
+        <div>
+            <button style="margin-right: 10px; width: 10%; vertical-align: top">
+                <img 
+                         src="ArrowLeft.png" 
+                         style="opacity: 0.3;" 
+                         onmouseover="this.style.opacity = 1.0" 
+                         onmouseout="this.style.opacity = 0.3" 
+                         onclick="
+                            var n = parseInt(document.getElementById('number').innerHTML);
+                                  
+                            var TArray = ['JIM LOVELL', 'DRACULA', 'GEORGE WASHINGTON', 'EDWARD MURPHY', 'PAUL REVERE'];
+                                  
+                            var PArray = ['https://thumbor.forbes.com/thumbor/960x0/https%3A%2F%2Fblogs-images.forbes.com%2Fjimclash%2Ffiles%2F2016%2F06%2FBN-NK831_LOVELL_GR_20160406122747-1200x783.jpg', 'https://i.guim.co.uk/img/static/sys-images/Admin/BkFill/Default_image_group/2012/6/20/1340206983052/Christopher-Lee-as-Count--008.jpg?width=300&quality=85&auto=format&fit=max&s=4392cc15aa1366f01c39c828a969d718', 'https://www.history.com/.image/t_share/MTYxNzYzNzIzODIyNzY5NDU0/first-10-presidents-washington-promo.jpg', 'https://images.thestar.com/3ugyhtOFciOtiLN4EiPjAfAQNfQ=/605x672/smart/filters:cb(2700061000)/https://www.thestar.com/content/dam/thestar/news/2009/01/11/the_man_behind_murphys_law/the_man_behind_murphyslaw.jpeg', 'https://www.paulreverehouse.org/wp-content/uploads/2016/06/ride-own-words-1.jpg'];
+                                  
+                            var QArray = ['HOUSTON, WE HAVE A PROBLEM. This was never actually said during the Apollo 13 mission.', 'I WANT TO SUCK YOUR BLOOD. Though probably the most common phrase uttered by teenagers on Halloween night, Dracula himself never said this', 'I CANNOT TELL A LIE... Though the story of Washington and the cherry tree has been told for centuries, it never actually happened and he never actually said this', 'ANYTHING THAT CAN GO WRONG, WILL. Murphy`s Law is both well known and incredibly misquoted, as Edward Murphy never said these words', 'THE BRITISH ARE COMING! Though it makes for a great story, Paul Revere`s mission was secret. He would not have ran down the streets screaming at the top of his lungs.'];
+
+                            n--;
+                            if(n<0){n=PArray.length-1;};   
+                            document.getElementById('bigImage').src = PArray[n];
+                            document.getElementById('number').innerHTML = n;
+                                  
+                            document.getElementById('quote').innerHTML = QArray[n];
+                            document.getElementById('title').innerHTML = TArray[n];
+
+                ">
+            </button>
+            <img src="https://i2.wp.com/www.innovativewealth.com/wp-content/uploads/2015/10/quote-abraham-lincoln-quote-internet-fake.jpg?ssl=1" style="width: 75%" id="bigImage" onmouseover="document.getElementById('quote').style.opacity = 1"
+            onmouseout="document.getElementById('quote').style.opacity = 0">
+            <button style="margin-left: 10px; width: 10%; vertical-align: top;">
+                <img 
+                         src="ArrowLeft.png" 
+                         style="opacity: 0.3; transform: rotate(180deg); "
+                         onmouseover="this.style.opacity = 1.0" 
+                         onmouseout="this.style.opacity = 0.3"
+                         onclick="
+                            var n = parseInt(document.getElementById('number').innerHTML);
+                                  
+                            var TArray = ['JIM LOVELL', 'DRACULA', 'GEORGE WASHINGTON', 'EDWARD MURPHY', 'PAUL REVERE'];
+                                  
+                            var PArray = ['https://thumbor.forbes.com/thumbor/960x0/https%3A%2F%2Fblogs-images.forbes.com%2Fjimclash%2Ffiles%2F2016%2F06%2FBN-NK831_LOVELL_GR_20160406122747-1200x783.jpg', 'https://i.guim.co.uk/img/static/sys-images/Admin/BkFill/Default_image_group/2012/6/20/1340206983052/Christopher-Lee-as-Count--008.jpg?width=300&quality=85&auto=format&fit=max&s=4392cc15aa1366f01c39c828a969d718', 'https://www.history.com/.image/t_share/MTYxNzYzNzIzODIyNzY5NDU0/first-10-presidents-washington-promo.jpg', 'https://images.thestar.com/3ugyhtOFciOtiLN4EiPjAfAQNfQ=/605x672/smart/filters:cb(2700061000)/https://www.thestar.com/content/dam/thestar/news/2009/01/11/the_man_behind_murphys_law/the_man_behind_murphyslaw.jpeg', 'https://www.paulreverehouse.org/wp-content/uploads/2016/06/ride-own-words-1.jpg'];
+                                  
+                            var QArray = ['HOUSTON, WE HAVE A PROBLEM. This was never actually said during the Apollo 13 mission.', 'I WANT TO SUCK YOUR BLOOD. Though probably the most common phrase uttered by teenagers on Halloween night, Dracula himself never said this', 'I CANNOT TELL A LIE... Though the story of Washington and the cherry tree has been told for centuries, it never actually happened and he never actually said this', 'ANYTHING THAT CAN GO WRONG, WILL. Murphy`s Law is both well known and incredibly misquoted, as Edward Murphy never said these words', 'THE BRITISH ARE COMING! Though it makes for a great story, Paul Revere`s mission was secret. He would not have ran down the streets screaming at the top of his lungs.'];
+
+                            n++;
+                            if(n==PArray.length){n=0;};
+                            document.getElementById('bigImage').src = PArray[n];
+                            document.getElementById('number').innerHTML = n;
+                                  
+                            document.getElementById('quote').innerHTML = QArray[n];
+                            document.getElementById('title').innerHTML = TArray[n];
+                ">
+            </button>
+        </div>
+        <hr>
+        <p id="quote"  style="text-align: center; opacity: 0">
+            There are many quotes attributed wrongly to famous people. Either because the actually speaker wouldn't get any attention, or simply because someone thinks it funny.
+        </p>
+    </body>
+    
+</html>

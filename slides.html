@@ -1,0 +1,54 @@
+<html>
+    <!-- Slides, slideshow of photographs -->
+    <!-- by Kendrick Smith -->
+    <!-- V 0.1 19 Sept. 2019 -->
+    
+    
+    
+    <head>
+        <title>Slideshow</title>
+        <p id="number" style="opacity: 0; height: 0px">0</p>
+    </head>
+    
+    <body>
+        <h1 style="text-align: center">ANIMALS THAT I WISH I OWNED</h1>
+        
+        <button style="margin-right: 10px; width: 10%; vertical-align: top">
+            <img 
+                     src="ArrowLeft.png" 
+                     style="opacity: 0.3;" 
+                     onmouseover="this.style.opacity = 1.0" 
+                     onmouseout="this.style.opacity = 0.3" 
+                     onclick="
+                        var n = parseInt(document.getElementById('number').innerHTML);
+                        var array = ['https://i.pinimg.com/474x/a3/e8/66/a3e866b6f1ced726d0d9385bec0a7f86.jpg',
+                        'https://scontent-dfw5-1.xx.fbcdn.net/v/t1.0-9/69019115_10216036200552646_8491050610756419584_n.jpg?_nc_cat=101&_nc_oc=AQmDYz5MobMSsUeLb08eMZEesrNdFggyYJqwElnY8VCWYnAcgVF6dDheKEAnKHa5LZU&_nc_ht=scontent-dfw5-1.xx&oh=0f4fc4870794d0b4babef5977ec6e5e3&oe=5E37D0D2','https://i.ytimg.com/vi/wyHimf8NsUE/maxresdefault.jpg','https://upload.wikimedia.org/wikipedia/commons/8/89/Tame_Crested_Gecko.jpg','https://www.mercurynews.com/wp-content/uploads/2017/04/0412_nws_rpe-l-tortoises_0413-0011-1.jpg?w=509','https://a-z-animals.com/media/animals/images/original/chinchilla2.jpg'];
+                              
+                        n--;
+                        if(n<0){n=array.length-1;};   
+                        document.getElementById('bigImage').src = array[n];
+                        document.getElementById('number').innerHTML = n;
+                        
+            ">
+        </button>
+        <img src="https://i.pinimg.com/474x/a3/e8/66/a3e866b6f1ced726d0d9385bec0a7f86.jpg" style="width: 75%" id="bigImage">
+        <button style="margin-left: 10px; width: 10%; vertical-align: top;">
+            <img 
+                     src="ArrowLeft.png" 
+                     style="opacity: 0.3; transform: rotate(180deg); "
+                     onmouseover="this.style.opacity = 1.0" 
+                     onmouseout="this.style.opacity = 0.3"
+                     onclick="
+                        var n = parseInt(document.getElementById('number').innerHTML);
+                        var array = ['https://i.pinimg.com/474x/a3/e8/66/a3e866b6f1ced726d0d9385bec0a7f86.jpg',
+                        'https://scontent-dfw5-1.xx.fbcdn.net/v/t1.0-9/69019115_10216036200552646_8491050610756419584_n.jpg?_nc_cat=101&_nc_oc=AQmDYz5MobMSsUeLb08eMZEesrNdFggyYJqwElnY8VCWYnAcgVF6dDheKEAnKHa5LZU&_nc_ht=scontent-dfw5-1.xx&oh=0f4fc4870794d0b4babef5977ec6e5e3&oe=5E37D0D2','https://i.ytimg.com/vi/wyHimf8NsUE/maxresdefault.jpg','https://upload.wikimedia.org/wikipedia/commons/8/89/Tame_Crested_Gecko.jpg','https://www.mercurynews.com/wp-content/uploads/2017/04/0412_nws_rpe-l-tortoises_0413-0011-1.jpg?w=509','https://a-z-animals.com/media/animals/images/original/chinchilla2.jpg'];
+                              
+                        n++;
+                        if(n==array.length){n=0;};
+                        document.getElementById('bigImage').src = array[n];
+                        document.getElementById('number').innerHTML = n;
+            ">
+        </button>
+    </body>
+    
+</html>
